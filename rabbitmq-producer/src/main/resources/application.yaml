@@ -1,0 +1,27 @@
+server:
+  port: 9001
+spring:
+   application:
+     name: rabbitmq-producer
+   rabbitmq:
+     host: 10.154.0.74
+     port: 5672
+     username: root
+     password: root123
+     publisher-confirms: true
+     virtual-host: /
+
+#压力测试使用相关配置
+#pressure:
+#  test:
+#    consumer:
+#      count: 5
+#    queue:
+#      count: 0
+
+management:
+  endpoint:
+      metrics:
+        enabled: true
+#  security:
+#    enabled: false
